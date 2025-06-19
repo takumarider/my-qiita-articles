@@ -1,1 +1,1 @@
-# qiita-public
+# my-qiita
