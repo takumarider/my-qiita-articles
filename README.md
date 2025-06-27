@@ -96,14 +96,11 @@ git add .
 ```
 git commit -m "feat: [記事タイトル] を新規投稿"
 ```
-既存記事の更新の場合のコミットメッセージ例:
 
 ```
 git commit -m "fix: [記事タイトル] の誤字を修正"
 # または
 git commit -m "update: [記事タイトル] に新しいセクションを追加"
-
-git commit -m "feat: PythonでHello Qiitaの記事を新規投稿"
 ```
 ### 3,GitHubにプッシュする
 >ローカルのコミットをGitHubリポジトリにアップロードします。
@@ -112,7 +109,7 @@ git push
 (リポジトリ設定の初回プッシュ時に -u origin main を実行済みであれば、2回目以降は git push だけでOKです。Gitが自動で追跡ブランチを認識します。)
 ```
 プッシュ後の確認
-プッシュが完了したら、ブラウザであなたのGitHubリポジトリ（https://github.com/takumarider/my-qiita-articles）にアクセスし、「Actions」タブをクリックしてください。
+>プッシュが完了したら、ブラウザであなたのGitHubリポジトリにアクセスし、「Actions」タブをクリックしてください。
 
 今行ったプッシュに対応するワークフローが自動的に実行されているはずです。
 ワークフローが緑色のチェックマークで完了すれば、Qiitaへの投稿・更新が成功しています。
@@ -123,11 +120,11 @@ Qiitaのあなたの記事一覧 (https://qiita.com/takumarider/items) で、記
 Qiita上で直接記事を更新した場合など、ローカルのファイルと同期を取りたい場合に使用します。
 注意: --force を付けると、ローカルの未コミットの変更を上書きしてQiitaの最新に合わせます。必要な場合以外は使用を避け、使用する際はローカルの変更を失わないよう十分注意してください。
 ```Bash
-cd ~/qiita-articles
+cd my-qiita-articles
 npx qiita pull --force
 Qiita CLI のヘルプを表示する
 ```
 ```Bash
-cd ~/qiita-articles
+cd my-qiita-articles
 npx qiita help
 ```
