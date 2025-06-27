@@ -153,3 +153,13 @@ git commit -m "🟡🟡🟡を追加"
 git push origin main
 ```
 >この手順で、特定したファイルだけリモートに反映できます。
+
+## 🔸もしも・・・ファイルを削除したい時・・Gitに反映
+- Finderやエディタで削除
+```
+そのあとに以下を実行：
+git status  # ← 削除されたことが確認できる
+git add -u  # ← 削除されたファイルをGitに反映
+git commit -m "不要な記事ファイルを削除"
+git push origin main 
+```
