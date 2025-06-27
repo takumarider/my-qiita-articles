@@ -1,0 +1,96 @@
+---
+title: Git学習ノート
+tags:
+  - 'Git'
+  - 'GitHub'
+  - '初心者'
+  - 'qiita-cli'
+  - 'ターミナル'
+private: false
+updated_at: ''
+id: null
+organization_url_name: null
+slide: false
+ignorePublish: false
+---
+# 【Gitコマンドまとめ】ターミナル操作に慣れるまでに使ってきたコマンドを一気に整理してみた（学習ログ）
+
+> **Gitの操作にまだ慣れていない人へ。**  
+> Qiita CLI を使って記事を書き始めてから、ターミナル操作が日常になり、Git のコマンドが少しずつ手になじんできた。  
+> この記事では、**これまでに使ってきた Git の基本コマンドを一覧形式でまとめておきます。**  
+> 「あれ、pushの前って何だっけ？」「ブランチってどう作るんだっけ？」と迷った時に見返すための、**自分用チートシート**です！
+
+### QiitaCLIを活用するようになった記事はこちら → [QiitaCLIで技術の幅を広げよう](https://qiita.com/takumarider/items/468abb18f2c943b359e6)
+
+## ✅ Gitコマンドが楽しくなってきたきっかけ
+
+最近、Qiita CLI を使って記事を書くようになり、以下のような変化がありました。
+
+- **記事作成する上で、Git コマンドを頻繁に使うようになった**
+- **投稿する上で、commit 〜 push の一連の流れが自然に身についた**
+- **ターミナルのログを少しずつ読めるようになってきた**
+- **Gitコマンドを操作している手触り感、使えている感がある**
+
+だからこそ、この記事を見返して「迷わずコマンドが打てる」ようにしたいと思っています！
+
+
+## 📘 Git基本コマンド集（実行例つき）
+
+| 機能 | コマンド | 説明 |
+|------|----------|------|
+| Gitのバージョン確認 | `git --version` | インストール済みか確認 |
+| 設定の確認 | `git config --list` | ユーザー名・メールなどの設定確認 |
+| 初期設定 | `git config --global user.name "Your Name"` | 名前の登録 |
+| 初期設定 | `git config --global user.email "you@example.com"` | メールアドレス登録 |
+| 初期化 | `git init` | 新しくGit管理を始める |
+| ステージに追加 | `git add .` | 全ファイルを追加 |
+| コミット | `git commit -m "コメント"` | スナップショットを記録 |
+| 状態確認 | `git status` | 変更点の確認 |
+| リモート登録 | `git remote add origin https://github.com/xxx.git` | GitHubと接続 |
+| プッシュ | `git push -u origin main` | 初回プッシュ |
+| 2回目以降のプッシュ | `git push` | 更新を反映 |
+
+---
+
+## 🧩 ブランチ関連のコマンド
+
+```bash
+# ブランチを作る
+git branch feature/login
+
+# ブランチに切り替える
+git checkout feature/login
+
+# 作成と切り替えを同時に
+git checkout -b feature/login
+
+# ブランチの一覧を見る
+git branch
+
+# メインに戻る
+git checkout main
+
+# ブランチをマージ
+git merge feature/login
+
+```
+## おまけ：Git練習におすすめなワークフロー
+```
+# リモートリポジトリを作っておいて、、、
+
+# ノートを書く
+touch 今日のGitメモ.md
+
+# GitHubへ push
+git add .
+git commit -m "今日のGitメモ追加"
+git push
+```
+→ Qiita にも同時投稿して「自分の学習ログ」として残していくようにします。
+
+## ✍️ さいごに
+Git コマンドは、覚えたと思っても忘れがちです。
+Qiita で記事を書いたり、GitHub で管理したりすることで、自然と手が覚えていきます。
+
+この記事はそのための**「自分専用Gitノート」**としてまとめました。
+もしこれから Git を学び始める人がいたら、この記事が少しでも役に立てばうれしいです！
