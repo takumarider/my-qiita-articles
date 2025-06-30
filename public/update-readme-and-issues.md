@@ -1,7 +1,9 @@
 ---
 title: update-readme-and-issues
 tags:
-  - ''
+  - '初心者'
+  - 'GitHub'
+  - 'モニター開発'
 private: false
 updated_at: ''
 id: null
